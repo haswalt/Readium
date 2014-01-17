@@ -14,9 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 1000px)" href="/assets/css/main-mobile.css" />
-    <link rel="stylesheet" type="text/css" media="only screen and (min-width: 1001px)" href="/assets/css/main-desktop.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn1.awesomism.co.uk/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 1000px)" href="//cdn1.awesomism.co.uk/assets/css/main-mobile.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width: 1001px)" href="//cdn1.awesomism.co.uk/assets/css/main-desktop.css" />
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
@@ -36,7 +36,27 @@
     {{ghost_foot}}
 
     {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="/assets/js/index.js"></script>
+    <script type="text/javascript" src="//cdn2.awesomism.co.uk/assets/js/index.js"></script>
 
+    {! Additional javascript for livefyre}}
+    {{#unless posts}}
+    <script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+    <script type="text/javascript">
+      (function () {
+        var articleId = fyre.conv.load.makeArticleId(null);
+        fyre.conv.load({}, [{
+          el: 'livefyre-comments',
+          network: "livefyre.com",
+          siteId: "325750",
+          articleId: articleId,
+          signed: false,
+          collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+          }
+        }], function() {});
+      }());
+    </script>
+    {{/unless}}
 </body>
 </html>
