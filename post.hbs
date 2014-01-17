@@ -11,9 +11,9 @@
     <header class="post-header contentpost__logo {{#if @blog.logo}}contentpost__logo__img_black_background{{/if}}">
         <a id="blog-logo" href="/">
             {{#if @blog.logo}}
-                <img src="{{@blog.logo}}" alt="Blog Logo" />
+                <img src="//cdn3.awesomism.co.uk{{@blog.logo}}" alt="Blog Logo" />
             {{else}}
-                {{@blog.title}}
+                Back to {{@blog.title}}
             {{/if}}
         </a>
     </header>
@@ -27,7 +27,7 @@
 
         <div class="contentpost__sidebar">
             <section class="contentpost__author cf">
-                <div class="contentpost__userimage" style="background-image: url({{author.image}})"></div>
+                <div class="contentpost__userimage" style="background-image: url(//cdn3.awesomism.co.uk/{{author.image}})"></div>
                 <h4>{{author.name}}</h4>
                 <p>{{author.bio}}</p>
             </section>
@@ -65,7 +65,7 @@
             </section>
 
             <div class="contentpost__footerbar">
-                <div class="contentpost__userimage" style="background-image: url({{author.image}})"></div>
+                <div class="contentpost__userimage" style="background-image: url(//cdn3.awesomism.co.uk{{author.image}})"></div>
                 <section class="contentpost__author cf">
                     <h4>{{author.name}}</h4>
                     <p>{{author.bio}}</p>
@@ -74,6 +74,10 @@
                     <h5>Published:</h5><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
                 </section>
             </div>
+
+            <hr/>
+
+            <div id="livefyre-comments"></div>
 
         </footer>
 
