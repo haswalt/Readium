@@ -10,6 +10,7 @@
                 <a href="https://twitter.com/haswalt" target="_blank"><i class="fa fa-twitter"></i></a>
                 <a href="https://github.com/haswalt" target="_blank"><i class="fa fa-github"></i></a>
                 <a href="http://uk.linkedin.com/in/harrywalter" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="http://harrywalter.co.uk" target="_blank"><i class="fa fa-user"></i></a>
             </footer>
         </section>
     </div>
@@ -37,7 +38,7 @@
                 {{/if}}
             {{/foreach}}
         </div>
-        <h4 class="contentlist__headline">Regular</h4>
+        <h4 class="contentlist__headline">Blog Posts</h4>
         {{#foreach posts}}
             {{#if featured}}
             {{else}}
@@ -47,7 +48,7 @@
                         <h2 class="contentlist__article__headline post-title" itemprop="name"><a href="{{url}}" itemprop="url">{{{title}}}</a></h2>
                     </header>
                     <section class="contentlist__article__excerpt post-excerpt" itemprop="description">
-                        <p>{{excerpt characters="250"}}&hellip; <a href="{{url}}" itemprop="url">Read more.</a></p>
+                        <p>{{excerpt characters="250"}}&hellip;<br><a href="{{url}}" itemprop="url">Read more.</a></p>
                     </section>
                     <section class="contentlist__full">
                         {{body}}
