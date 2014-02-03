@@ -251,7 +251,7 @@
                 background-position: center
                 margin: 0 auto $rootSize/2
             .sidebar__information__title
-                font-size: $rootSize
+                font-size: $rootSize * 2
                 margin: 0
                 padding: $rootSize*2 0 0
                 line-height: $rootSize*2
@@ -263,8 +263,9 @@
                 margin: 0
                 padding: 0 0
                 line-height: $rootSize*1.35
-                color: rgba(255,255,255,0.5)
+                color: $colorWhite
                 font-weight: normal
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, .8)
             .sidebar__customlinks
                 line-height: $rootSize*1.35
                 padding: $rootSize/2 0 $rootSize/3
@@ -365,6 +366,10 @@
                     color: $colorBlackLighter
                     text-decoration: none
                     transition: all 0.25s ease-in-out
+                    text-align: right
+                    float: right
+                    width: 100px
+                    font-size: 12px
                     &:hover
                         color: $colorMain
                         text-decoration: underline
@@ -1040,24 +1045,29 @@
                 -moz-border-radius: 100%
                 border-radius: 100%
                 background-size: 100%
-        .contentlist__article__excerpt p
-            font-size: 16px
-            line-height: 24px
-            color: #999
-            margin: 0
-            padding: 0 0 8px
-            font-family: Vollkorn,Georgia,serif
-            a
-                color: $colorBlackLighter
-                text-decoration: none
-                transition: all 0.25s ease-in-out
-                &:hover
-                    color: $colorMain
-                    text-decoration: underline
+        .contentlist__article__excerpt
+            p
+                font-size: 40px
+                line-height: 24px
+                color: #999
+                margin: 0
+                padding: 0 0 8px
+                font-family: Vollkorn,Georgia,serif
+                a
+                    color: $colorBlackLighter
+                    text-decoration: none
+                    transition: all 0.25s ease-in-out
+                    text-align: right
+                    float: right
+                    width: 100px
+                    font-size: 12px
+                    &:hover
+                        color: $colorMain
+                        text-decoration: underline
         .contentlist__article__meta
             font-size: 12px
             line-height: 24px
-            color: #ccc
+            color: #999
             font-family: SourceSansPro,sans-serif
     
     .contentlist__pagination
