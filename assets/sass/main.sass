@@ -247,8 +247,7 @@
                 border-radius: $rootSize*5
                 overflow: hidden
                 background-repeat: no-repeat
-                background-size: 100%
-                background-position: center
+                background-size: cover
                 margin: 0 auto $rootSize/2
             .sidebar__information__title
                 font-size: $rootSize * 2
@@ -315,6 +314,15 @@
             padding: 50px 85px
         .contentlist__featured
             padding: 0 0 $rootSize*2
+            #img-post-cover
+                display: none
+            .tag-bigimage #img-post-cover
+                width: 100%
+                display: block
+                background-size: cover
+                padding-top: 50%
+                border-radius: $rootSize/2
+                margin: $rootSize/2 0 $rootSize
             .contentlist__headline
                 display: none
                 &:first-child
@@ -350,10 +358,10 @@
                 height: $rootSize*2
                 overflow: hidden
                 background-color: #f2f2f0
-                -webkit-border-radius: 100%
-                -moz-border-radius: 100%
-                border-radius: 100%
-                background-size: 100%
+                -webkit-border-radius: 50%
+                -moz-border-radius: 50%
+                border-radius: 50%
+                background-size: cover
         .contentlist__article__excerpt
             p
                 font-size: $rootSize*1.1
@@ -548,8 +556,7 @@
                     border-radius: $rootSize*5
                     overflow: hidden
                     background-repeat: no-repeat
-                    background-size: 100%
-                    background-position: center
+                    background-size: cover
 
                 h4
                     padding: $rootSize*6 0 $rootSize*0.5
@@ -933,10 +940,10 @@
             .sidebar__userimage
                 width: 80px
                 height: 80px
-                border-radius: 80px
+                border-radius: 40px
                 overflow: hidden
                 background-repeat: no-repeat
-                background-size: 100%
+                background-size: cover
                 background-position: center
                 margin: 0 auto 16px
             .sidebar__information__description
@@ -1047,7 +1054,7 @@
                 background-size: 100%
         .contentlist__article__excerpt
             p
-                font-size: $rootSize
+                font-size: 16px
                 line-height: 24px
                 color: #999
                 margin: 0
@@ -1390,7 +1397,7 @@
             blockquote
                 -moz-box-sizing: border-box
                 box-sizing: border-box
-                margin: 16px -64px 32px -64px
+                margin: 0px
                 padding: 0
                 text-align: center
                 font-size: 35.2px
